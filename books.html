@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalogue — Bookhaven</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="books">
+
+  <header class="site-header">
+    <div class="shelf-strip"></div>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">☙</span>Bookhaven<span class="brand-tag">Library Management</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="books.html" class="active">Catalogue</a>
+        <a href="members.html">Members</a>
+        <a href="issue-return.html">Issue &amp; Return</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+
+      <div class="page-head">
+        <div>
+          <h1>Catalogue</h1>
+          <p>Every title held by the library, how many copies exist, and how many are free to borrow right now.</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h3>Add a new title</h3></div>
+        <p class="hint">New books start with every copy available.</p>
+        <form id="book-form">
+          <div class="field-grid">
+            <div class="field">
+              <label for="f-title">Title</label>
+              <input type="text" id="f-title" placeholder="e.g. The Midnight Library" required>
+            </div>
+            <div class="field">
+              <label for="f-author">Author</label>
+              <input type="text" id="f-author" placeholder="e.g. Matt Haig" required>
+            </div>
+            <div class="field">
+              <label for="f-isbn">ISBN</label>
+              <input type="text" id="f-isbn" placeholder="e.g. 9780525559474">
+            </div>
+            <div class="field">
+              <label for="f-genre">Genre</label>
+              <input type="text" id="f-genre" placeholder="e.g. Fiction">
+            </div>
+            <div class="field">
+              <label for="f-copies">Number of copies</label>
+              <input type="number" id="f-copies" min="1" value="1" required>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-brass">Add to catalogue</button>
+            <span class="form-note">You can edit copy counts later from the table below.</span>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="toolbar">
+          <input type="search" id="book-search" placeholder="Search by title, author or ISBN…">
+          <select id="book-genre-filter"><option value="">All genres</option></select>
+          <span class="count" id="books-count"></span>
+        </div>
+        <div class="table-wrap">
+          <table class="ledger">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Copies</th>
+                <th>Availability</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="books-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">Bookhaven Library Management System — built with HTML, CSS &amp; JavaScript.</footer>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
