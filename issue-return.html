@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue &amp; Return — Bookhaven</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="issue-return">
+
+  <header class="site-header">
+    <div class="shelf-strip"></div>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">☙</span>Bookhaven<span class="brand-tag">Library Management</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Catalogue</a>
+        <a href="members.html">Members</a>
+        <a href="issue-return.html" class="active">Issue &amp; Return</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+
+      <div class="page-head">
+        <div>
+          <h1>Issue &amp; Return</h1>
+          <p>Hand a book to a member, or check one back in. Loans run for 14 days from the day they're issued.</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h3>Issue a book</h3></div>
+        <form id="issue-form">
+          <div class="field-grid">
+            <div class="field">
+              <label for="i-book">Book</label>
+              <select id="i-book" required></select>
+            </div>
+            <div class="field">
+              <label for="i-member">Member</label>
+              <select id="i-member" required></select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-brass">Issue book</button>
+            <span class="form-note">Due back in 14 days.</span>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Currently on loan</h2>
+          <span class="count" id="loans-count"></span>
+        </div>
+        <div class="table-wrap">
+          <table class="ledger">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Borrower</th>
+                <th>Issued</th>
+                <th>Due</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="loans-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Recent returns</h2></div>
+        <div class="table-wrap">
+          <table class="ledger">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Borrower</th>
+                <th>Issued</th>
+                <th>Returned</th>
+              </tr>
+            </thead>
+            <tbody id="history-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">Bookhaven Library Management System — built with HTML, CSS &amp; JavaScript.</footer>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
