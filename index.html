@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookhaven — Library Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+
+  <header class="site-header">
+    <div class="shelf-strip"></div>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">☙</span>Bookhaven<span class="brand-tag">Library Management</span></a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="books.html">Catalogue</a>
+        <a href="members.html">Members</a>
+        <a href="issue-return.html">Issue &amp; Return</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+
+      <section class="hero">
+        <div>
+          <h1>Every book, every borrower, <em>one quiet ledger.</em></h1>
+          <p>Bookhaven keeps track of what's on the shelf, who has borrowed what, and what's due back — so the front desk can spend less time searching and more time helping readers.</p>
+          <div class="hero-actions">
+            <a href="issue-return.html" class="btn btn-brass">Issue a book</a>
+            <a href="books.html" class="btn btn-outline">Browse catalogue</a>
+          </div>
+        </div>
+        <div class="hero-figure">
+          <div class="fig-row"><span>Loan period</span><span>14 days</span></div>
+          <div class="fig-row"><span>Open</span><span>9:00 AM – 7:00 PM</span></div>
+          <div class="fig-row"><span>Renewals</span><span>Ask at the desk</span></div>
+          <div class="fig-row"><span>Overdue notices</span><span>Shown below</span></div>
+        </div>
+      </section>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-label">Titles catalogued</div>
+          <div class="stat-value" id="stat-titles">0</div>
+          <div class="stat-sub" id="stat-copies-sub">0 copies on the shelf</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Enrolled members</div>
+          <div class="stat-value" id="stat-members">0</div>
+          <div class="stat-sub">Active library cards</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Currently on loan</div>
+          <div class="stat-value" id="stat-loans">0</div>
+          <div class="stat-sub">Across all members</div>
+        </div>
+        <div class="stat-card warn">
+          <div class="stat-label">Overdue returns</div>
+          <div class="stat-value" id="stat-overdue">0</div>
+          <div class="stat-sub">Past their due date</div>
+        </div>
+      </div>
+
+      <div class="quick-grid">
+        <a href="books.html" class="quick-card">
+          <span class="q-icon">📚</span>
+          <h3>Catalogue</h3>
+          <p>Search titles, add new arrivals, and track how many copies are free.</p>
+        </a>
+        <a href="members.html" class="quick-card">
+          <span class="q-icon">🪪</span>
+          <h3>Members</h3>
+          <p>Enrol new readers and see who currently has books checked out.</p>
+        </a>
+        <a href="issue-return.html" class="quick-card">
+          <span class="q-icon">🔄</span>
+          <h3>Issue &amp; Return</h3>
+          <p>Hand out a book, take one back, and keep an eye on due dates.</p>
+        </a>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h2>Recent activity</h2></div>
+        <ul class="activity-list" id="activity-feed"></ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">Bookhaven Library Management System — built with HTML, CSS &amp; JavaScript.</footer>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
