@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Bookhaven</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+
+  <header class="site-header">
+    <div class="shelf-strip"></div>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">☙</span>Bookhaven<span class="brand-tag">Library Management</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Catalogue</a>
+        <a href="members.html">Members</a>
+        <a href="issue-return.html">Issue &amp; Return</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+
+      <div class="page-head">
+        <div>
+          <h1>About Bookhaven</h1>
+          <p>What this system does, and how to reach the front desk.</p>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <section class="panel">
+          <div class="panel-head"><h2>What Bookhaven does</h2></div>
+          <p style="color:var(--ink-dim); font-size:14.5px; margin-bottom:12px;">
+            Bookhaven is a small library management system built to replace paper registers. It keeps a catalogue of every title on the shelf, a list of enrolled members, and a running log of what's been issued and returned.
+          </p>
+          <p style="color:var(--ink-dim); font-size:14.5px;">
+            Everything is stored in the browser, so the catalogue, members and loan history you see are kept on this device between visits.
+          </p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Library hours</h2></div>
+          <table class="hours-table">
+            <tr><td>Monday – Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+            <tr><td>Saturday</td><td>10:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+            <tr><td>Public holidays</td><td>Closed</td></tr>
+          </table>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Borrowing rules</h2></div>
+          <ul class="activity-list">
+            <li><span class="activity-dot"></span><div>Loan period is 14 days from the date a book is issued.</div></li>
+            <li><span class="activity-dot"></span><div>Members can hold multiple titles at once, subject to copies on hand.</div></li>
+            <li><span class="activity-dot"></span><div>Overdue books are flagged automatically on the Issue &amp; Return desk.</div></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Contact the desk</h2></div>
+          <table class="hours-table">
+            <tr><td>Front desk</td><td>+91 44 2345 6789</td></tr>
+            <tr><td>Email</td><td>desk@bookhaven.example</td></tr>
+            <tr><td>Location</td><td>Reading Room, Ground Floor</td></tr>
+          </table>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">Bookhaven Library Management System — built with HTML, CSS &amp; JavaScript.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
