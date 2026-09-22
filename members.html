@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Members — Bookhaven</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="members">
+
+  <header class="site-header">
+    <div class="shelf-strip"></div>
+    <div class="header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">☙</span>Bookhaven<span class="brand-tag">Library Management</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Catalogue</a>
+        <a href="members.html" class="active">Members</a>
+        <a href="issue-return.html">Issue &amp; Return</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+
+      <div class="page-head">
+        <div>
+          <h1>Members</h1>
+          <p>Everyone holding a library card, with a running count of what they currently have on loan.</p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h3>Enrol a new member</h3></div>
+        <form id="member-form">
+          <div class="field-grid">
+            <div class="field">
+              <label for="m-name">Full name</label>
+              <input type="text" id="m-name" placeholder="e.g. Divya Krishnan" required>
+            </div>
+            <div class="field">
+              <label for="m-email">Email</label>
+              <input type="email" id="m-email" placeholder="e.g. divya.k@example.com">
+            </div>
+            <div class="field full">
+              <label for="m-phone">Phone number</label>
+              <input type="tel" id="m-phone" placeholder="e.g. 98765 12340">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-brass">Enrol member</button>
+            <span class="form-note">Joining date is recorded automatically.</span>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="toolbar">
+          <input type="search" id="member-search" placeholder="Search by name or email…">
+          <span class="count" id="members-count"></span>
+        </div>
+        <div class="table-wrap">
+          <table class="ledger">
+            <thead>
+              <tr>
+                <th>Member</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Joined</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="members-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">Bookhaven Library Management System — built with HTML, CSS &amp; JavaScript.</footer>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
